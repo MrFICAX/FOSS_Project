@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D2FD2BF0-5917-4B2E-8D5B-916C73D11FA0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FOSSDesktopApp</RootNamespace>
+    <AssemblyName>FOSSDesktopApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>FossLogoPrimer.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.6.0.0-preview.4.21253.7\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.Json.6.0.0-preview.4.21253.7\lib\net461\System.Net.Http.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0-preview.4.21253.7\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.6.0.0-preview.4.21253.7\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.6.0.0-preview.4.21253.7\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AddAdministratorController.cs" />
+    <Compile Include="Controllers\AddTeamController.cs" />
+    <Compile Include="Controllers\AddCompetitionController.cs" />
+    <Compile Include="Controllers\AdministratorController.cs" />
+    <Compile Include="Controllers\CompetitionController.cs" />
+    <Compile Include="Controllers\ControlDrawController.cs" />
+    <Compile Include="Controllers\Interfaces\AddNewInstances\IAddAdministratorController.cs" />
+    <Compile Include="Controllers\Interfaces\AddNewInstances\IAddTeamController.cs" />
+    <Compile Include="Controllers\Interfaces\AddNewInstances\IAddCompetitionController.cs" />
+    <Compile Include="Controllers\Interfaces\IAdministratorController.cs" />
+    <Compile Include="Controllers\Interfaces\ICompetitionController.cs" />
+    <Compile Include="Controllers\Interfaces\IControlDrawController.cs" />
+    <Compile Include="Controllers\Interfaces\IController.cs" />
+    <Compile Include="Controllers\Interfaces\ILoginController.cs" />
+    <Compile Include="Controllers\Interfaces\IMainController.cs" />
+    <Compile Include="Controllers\Interfaces\IManageMatchesController.cs" />
+    <Compile Include="Controllers\Interfaces\IMatchController.cs" />
+    <Compile Include="Controllers\Interfaces\IOrganizerController.cs" />
+    <Compile Include="Controllers\Interfaces\IPlayerController.cs" />
+    <Compile Include="Controllers\Interfaces\IRefereeController.cs" />
+    <Compile Include="Controllers\Interfaces\ITeamController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\ManageMatchesController.cs" />
+    <Compile Include="Controllers\MatchController.cs" />
+    <Compile Include="Controllers\OrganizerController.cs" />
+    <Compile Include="Controllers\PlayerController.cs" />
+    <Compile Include="Controllers\RefereeController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Engine\Administrator.cs" />
+    <Compile Include="Engine\Competition.cs" />
+    <Compile Include="Engine\CompetitionList.cs" />
+    <Compile Include="Engine\DBLinks.cs" />
+    <Compile Include="Engine\DrawPhase.cs" />
+    <Compile Include="Engine\EventGroupPhase.cs" />
+    <Compile Include="Engine\IDataBaseCommunication.cs" />
+    <Compile Include="Engine\Match.cs" />
+    <Compile Include="Engine\Organizer.cs" />
+    <Compile Include="Engine\Participaint.cs" />
+    <Compile Include="Engine\Player.cs" />
+    <Compile Include="Engine\PlayerStatistics.cs" />
+    <Compile Include="Engine\Referee.cs" />
+    <Compile Include="Engine\RefereeList.cs" />
+    <Compile Include="Engine\Team.cs" />
+    <Compile Include="Engine\TeamList.cs" />
+    <Compile Include="Engine\TeamStatistics.cs" />
+    <Compile Include="Engine\Trainer.cs" />
+    <Compile Include="Forms\AddAdministratorWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddAdministratorWindow.Designer.cs">
+      <DependentUpon>AddAdministratorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddOrganizerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddOrganizerWindow.Designer.cs">
+      <DependentUpon>AddOrganizerWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddTeamWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddTeamWindow.Designer.cs">
+      <DependentUpon>AddTeamWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddCompetitionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCompetitionWindow.Designer.cs">
+      <DependentUpon>AddCompetitionWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdministratorWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdministratorWindow.Designer.cs">
+      <DependentUpon>AdministratorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CompetitionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CompetitionWindow.Designer.cs">
+      <DependentUpon>CompetitionWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ControlDrawWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ControlDrawWindow.Designer.cs">
+      <DependentUpon>ControlDrawWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Interfaces\IAddAdministratorWindow.cs" />
+    <Compile Include="Forms\Interfaces\IAddTeamWindow.cs" />
+    <Compile Include="Forms\Interfaces\IAddCompetitionWindow.cs" />
+    <Compile Include="Forms\Interfaces\IAdministratorWindow.cs" />
+    <Compile Include="Forms\Interfaces\ICompetitionWindow.cs" />
+    <Compile Include="Forms\Interfaces\IControlDrawWindow.cs" />
+    <Compile Include="Forms\Interfaces\IManageMatchesWindow.cs" />
+    <Compile Include="Forms\Interfaces\ILoginWindow.cs" />
+    <Compile Include="Forms\Interfaces\IMainWindow.cs" />
+    <Compile Include="Forms\Interfaces\IMatchWindow.cs" />
+    <Compile Include="Forms\Interfaces\IOrganizerWindow.cs" />
+    <Compile Include="Forms\Interfaces\IPlayerWindow.cs" />
+    <Compile Include="Forms\Interfaces\IRefereeWindow.cs" />
+    <Compile Include="Forms\Interfaces\ITeamWindow.cs" />
+    <Compile Include="Forms\LoadingDialogWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoadingDialogWindow.Designer.cs">
+      <DependentUpon>LoadingDialogWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginWindow.Designer.cs">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainWindowForm.Designer.cs">
+      <DependentUpon>MainWindowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageMatchesWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageMatchesWindow.Designer.cs">
+      <DependentUpon>ManageMatchesWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MatchWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MatchWindow.Designer.cs">
+      <DependentUpon>MatchWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrganizerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrganizerWindow.Designer.cs">
+      <DependentUpon>OrganizerWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlayerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlayerWindow.Designer.cs">
+      <DependentUpon>PlayerWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RefereeWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RefereeWindow.Designer.cs">
+      <DependentUpon>RefereeWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TeamWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeamWindow.Designer.cs">
+      <DependentUpon>TeamWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddAdministratorWindow.resx">
+      <DependentUpon>AddAdministratorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddCompetitionWindow.resx">
+      <DependentUpon>AddCompetitionWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddOrganizerWindow.resx">
+      <DependentUpon>AddOrganizerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddTeamWindow.resx">
+      <DependentUpon>AddTeamWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdministratorWindow.resx">
+      <DependentUpon>AdministratorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CompetitionWindow.resx">
+      <DependentUpon>CompetitionWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ControlDrawWindow.resx">
+      <DependentUpon>ControlDrawWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoadingDialogWindow.resx">
+      <DependentUpon>LoadingDialogWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginWindow.resx">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindowForm.resx">
+      <DependentUpon>MainWindowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageMatchesWindow.resx">
+      <DependentUpon>ManageMatchesWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MatchWindow.resx">
+      <DependentUpon>MatchWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrganizerWindow.resx">
+      <DependentUpon>OrganizerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RefereeWindow.resx">
+      <DependentUpon>RefereeWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TeamWindow.resx">
+      <DependentUpon>TeamWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include=".editorconfig" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resursi\FossLogoPrimer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FossLogoPrimer.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
